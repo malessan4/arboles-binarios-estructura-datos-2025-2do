@@ -8,4 +8,4 @@ class nodo_arbol(object):
 
 class ArbolBinario:
     def __init__(self):
-        slef.raiz = None
+        self.raiz = None
