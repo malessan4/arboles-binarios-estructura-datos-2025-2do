@@ -10,7 +10,7 @@ class ArbolBinario:
     def __init__(self):
         self.raiz = None
 
-    def arbol_vacio(raiz):
+    def arbol_vacio(self):
         return self.raiz == None
 
     def insertar(self, dato):
@@ -27,24 +27,24 @@ class ArbolBinario:
             nodo_actual.izquierda = self._insertar_recursivo(nodo_actual.izquierda, dato)
         return nodo_actual
 
-        def inorden(self):
-        """Recorrido inorden"""
+    def inorden(self):
+    #Recorrido inorden
         self._inorden_recursivo(self.raiz)
         print()
 
     def _inorden_recursivo(self, nodo):
-        """Método privado para inorden"""
+        #Método privado para inorden
         if nodo is not None:
             self._inorden_recursivo(nodo.izquierda)
             print(nodo.informacion, end=" ")
             self._inorden_recursivo(nodo.derecha)
 
     def buscar(self, dato):
-        """Busca un dato en el árbol"""
+        #Busca un dato en el árbol
         return self._buscar_recursivo(self.raiz, dato)
 
     def _buscar_recursivo(self, nodo, dato):
-        """Método privado para búsqueda"""
+        #Método privado para búsqueda
         if nodo is None:
             return False
         if dato == nodo.informacion:
